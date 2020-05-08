@@ -3,6 +3,8 @@ function LoadContent(index, folderName, fileName, fileExtension) {
     const link = `${baseURL}/${folderName}/${fileName}${index}.${fileExtension}`;
     const parent = document.getElementById("content-holder");
 
+    console.log(link);
+
     const LoadIfExists = (url, callback) => {
         const request = new XMLHttpRequest();
         request.onreadystatechange = () => {
