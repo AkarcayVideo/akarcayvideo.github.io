@@ -1,5 +1,6 @@
 function LoadContent(index, parentId, folderName, fileName, fileExtension) {
-    const link = `https://akarcayvideo.github.io/icerik/${folderName}/${fileName}${index}.${fileExtension}`;
+    const baseURL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/icerik";
+    const link = `${baseURL}/${folderName}/${fileName}${index}.${fileExtension}`;
     const parent = document.getElementById(parentId);
 
     const LoadIfExists = (url, callback) => {

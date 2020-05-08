@@ -162,8 +162,8 @@ body {
 
 #content-holder img, #content-holder video {
   width: 100%;
-  -webkit-filter: brightness(0.25);
-          filter: brightness(0.25);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   cursor: pointer;
