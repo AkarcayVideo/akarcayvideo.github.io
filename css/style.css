@@ -144,7 +144,11 @@ body {
   }
 }
 
-#videos {
+.content-header {
+  margin-bottom: 20px;
+}
+
+#content-holder {
   width: 80vw;
   max-width: 1000px;
   display: -ms-grid;
@@ -156,7 +160,7 @@ body {
   row-gap: 10px;
 }
 
-#videos img {
+#content-holder img, #content-holder video {
   width: 100%;
   -webkit-filter: brightness(0.25);
           filter: brightness(0.25);
@@ -166,7 +170,7 @@ body {
   border-radius: 5px;
 }
 
-#videos img:hover {
+#content-holder img:hover, #content-holder video:hover {
   -webkit-filter: brightness(1);
           filter: brightness(1);
   border-radius: 0;

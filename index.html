@@ -14,14 +14,14 @@
 
     <div id="nav-container">
         <nav>
-            <a href="#">Anasayfa</a>
+            <a href="index.html">Anasayfa</a>
             <div class="link-seperator">-</div>
             <div class="dropdown">
                 <a class="dropdown-text">Akarcay</a>
                 <div class="dropdown-content">
                     <div class="whitespace"></div>
-                    <a href="#">Videolar</a>
-                    <a href="#">Fotoğraflar</a>
+                    <a href="videolar.html">Videolar</a>
+                    <a href="fotograflar.html">Fotoğraflar</a>
                 </div>
             </div>
             <div class="link-seperator">-</div>
@@ -29,16 +29,16 @@
                 <a class="dropdown-text">Videolar</a>
                 <div class="dropdown-content">
                     <div class="whitespace"></div>
-                    <a href="#">Nostalji</a>
-                    <a href="#">Düğün</a>
+                    <a href="nostalji.html">Nostalji</a>
+                    <a href="dugun.html">Düğün</a>
                 </div>
             </div>
             <div class="link-seperator">-</div>
-            <a href="#">Canlı Yayın</a>
+            <a href="canli-yayin.html">Canlı Yayın</a>
         </nav>
     </div>
 
-    <div id="videos"></div>
+    <div id="content-holder"></div>
 
     <footer>
         <a href="#"><img src="./img/facebook.png" alt=""></a>
@@ -46,6 +46,9 @@
     </footer>
 </body>
 
-<script src="./js/VideoLoader.js"></script>
+<script src="./js/ContentLoader.js"></script>
+<script>
+    LoadContent(1, "content-holder", "anasayfa", "video", "mp4");
+</script>
 
 </html>
