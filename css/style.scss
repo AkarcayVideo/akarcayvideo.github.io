@@ -139,6 +139,35 @@ body{
     }
 }
 
+#content-viewer {
+    position: absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(1px);
+    z-index: 2;
+    
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2em;
+
+    .left, .right {
+        color: white;
+        cursor: pointer;
+        opacity: .7;
+        transition: opacity .2s;
+
+        &:hover { opacity: 1 }
+    }
+
+    .content img, .content video{
+        width: 75vw;
+        max-height: 75vh;
+        box-shadow: 0 0 10px black;
+    }
+}
+
 footer{
     width: 100px;
     margin-top: 100px;
