@@ -96,7 +96,7 @@ function ShowContentViewer(index, folderName, fileName, fileExtension) {
 
         const y = (e.clientY / window.innerHeight);
 
-        if (y <= .25 || y >= .75) {
+        if (y <= .3 || y >= .7) {
             viewer.style.display = "none";
             ScrollLock(false);
         }
