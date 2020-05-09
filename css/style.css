@@ -160,7 +160,7 @@ body {
   row-gap: 10px;
 }
 
-#content-holder img, #content-holder video {
+#content-holder img, #content-holder video, #content-holder iframe {
   width: 100%;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
@@ -170,12 +170,16 @@ body {
   border-radius: 5px;
 }
 
-#content-holder img:hover, #content-holder video:hover {
+#content-holder img:hover, #content-holder video:hover, #content-holder iframe:hover {
   -webkit-filter: brightness(1);
           filter: brightness(1);
   border-radius: 0;
   -webkit-box-shadow: 0 0 6px var(--theme-color);
           box-shadow: 0 0 6px var(--theme-color);
+}
+
+#content-holder iframe {
+  max-height: 200px;
 }
 
 #content-viewer {

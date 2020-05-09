@@ -1,18 +1,18 @@
-const VIDEOLAR = {
+const VIDEOS = {
     "anasayfa": [
-        "https://berkinakkaya.github.io/1",
-        "https://berkinakkaya.github.io/2"
+        "https://www.youtube.com/embed/M0xxa-46MTY",
+        "https://www.youtube.com/embed/M0xxa-46MTY",
     ],
     "dugun": [
-        "https://berkinakkaya.github.io/1",
-        "https://berkinakkaya.github.io/2"
+        "https://www.youtube.com/embed/M0xxa-46MTY",
+        "https://www.youtube.com/embed/M0xxa-46MTY",
     ],
     "nostalji": [
-        "https://berkinakkaya.github.io/1",
-        "https://berkinakkaya.github.io/2"
+        "https://www.youtube.com/embed/M0xxa-46MTY",
+        "https://www.youtube.com/embed/M0xxa-46MTY",
     ],
     "videolar": [
-        "https://berkinakkaya.github.io/1",
-        "https://berkinakkaya.github.io/2"
+        "https://www.youtube.com/embed/M0xxa-46MTY",
+        "https://www.youtube.com/embed/M0xxa-46MTY",
     ]
 }

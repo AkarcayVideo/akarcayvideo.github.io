@@ -35,6 +35,8 @@ function ShowVideoViewer(index, link) {
 
     left.onclick = () => ShowImageViewer(index - 1);
     right.onclick = () => ShowImageViewer(index + 1);
+
+    console.log(index, link)
 }
 
 // CLOSE CONTENT VIEWER

@@ -33,6 +33,20 @@ function LoadPhotos(index) {
     })
 }
 
-function LoadVideos() {
-    LAST_INDEX = 0;
+function LoadVideos(page) {
+    const parent = document.getElementById("content-holder");
+    const videos = VIDEOS[page];
+
+    for (let i = 0; i < videos.length; i++) {
+
+        const iframe = document.createElement("iframe");
+        iframe.src = videos[i];
+        iframe.frameBorder = 0;
+        parent.appendChild(iframe);
+
+        iframe.addEventListener("click", () => ShowVideoViewer(i, videos[i]));
+
+    }
+
+    LAST_INDEX = VIDEOS[page].length;
 }
