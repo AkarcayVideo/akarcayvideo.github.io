@@ -150,13 +150,14 @@ body{
     display: none;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 2em;
 
     .left, .right {
         color: white;
         cursor: pointer;
         opacity: .7;
+        font-size: 3em;
         transition: opacity .2s;
+        text-align: center;
 
         &:hover { opacity: 1 }
     }
@@ -165,6 +166,18 @@ body{
         width: 75vw;
         max-height: 75vh;
         box-shadow: 0 0 10px black;
+    }
+
+    @media (max-width: 500px)
+    {
+        .left, .right {
+            position: absolute;
+            top: 50%;
+            opacity: 1;
+        }
+
+        .left { left: 15%;   transform: translateX(50%)  translateY(-50%); }
+        .right { right: 15%; transform: translateX(-50%) translateY(-50%); }
     }
 }
 

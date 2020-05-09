@@ -195,15 +195,16 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  font-size: 2em;
 }
 
 #content-viewer .left, #content-viewer .right {
   color: white;
   cursor: pointer;
   opacity: .7;
+  font-size: 3em;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
+  text-align: center;
 }
 
 #content-viewer .left:hover, #content-viewer .right:hover {
@@ -215,6 +216,24 @@ body {
   max-height: 75vh;
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
+}
+
+@media (max-width: 500px) {
+  #content-viewer .left, #content-viewer .right {
+    position: absolute;
+    top: 50%;
+    opacity: 1;
+  }
+  #content-viewer .left {
+    left: 15%;
+    -webkit-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
+  }
+  #content-viewer .right {
+    right: 15%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 footer {

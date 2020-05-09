@@ -1,21 +1,23 @@
-function LoadContent(index, folderName, fileName, fileExtension) {
+const GenerateLink = (index, folderName, fileName, fileExtension) => {
     const baseURL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/icerik";
-    const link = `${baseURL}/${folderName}/${fileName}${index}.${fileExtension}`;
+    return `${baseURL}/${folderName}/${fileName}${index}.${fileExtension}`;
+}
+
+const GetRequestStatus = (url, callback) => {
+    const request = new XMLHttpRequest();
+    request.onreadystatechange = () => {
+        if (request.readyState == 2)
+            callback(request.status == 200);
+    }
+    request.open("GET", url);
+    request.send(null);
+}
+
+function LoadContent(index, folderName, fileName, fileExtension) {
+    const link = GenerateLink(index, folderName, fileName, fileExtension);
     const parent = document.getElementById("content-holder");
 
-    console.log(link);
-
-    const LoadIfExists = (url, callback) => {
-        const request = new XMLHttpRequest();
-        request.onreadystatechange = () => {
-            if (request.readyState == 2)
-                callback(request.status == 200);
-        }
-        request.open("GET", url, true);
-        request.send(null);
-    }
-
-    LoadIfExists(link, exists => {
+    GetRequestStatus(link, exists => {
         if (exists) {
 
             let element = null;
@@ -43,7 +45,9 @@ function LoadContent(index, folderName, fileName, fileExtension) {
 
             if (element) {
                 parent.appendChild(element);
-                element.addEventListener("click", () => ShowContentViewer(link, fileExtension));
+                element.addEventListener("click", () => {
+                    ShowContentViewer(index, folderName, fileName, fileExtension)
+                });
             }
 
             LoadContent(index + 1, folderName, fileName, fileExtension);
@@ -51,18 +55,39 @@ function LoadContent(index, folderName, fileName, fileExtension) {
     })
 }
 
-function ShowContentViewer(link, extension) {
+function ShowContentViewer(index, folderName, fileName, fileExtension) {
     const viewer = document.getElementById("content-viewer");
+    const link = GenerateLink(index, folderName, fileName, fileExtension);
     viewer.style.display = "flex";
 
     const content = viewer.querySelector(".content");
 
-    if (extension == "jpeg" || extension == "jpg") {
+    if (fileExtension == "jpeg" || fileExtension == "jpg") {
         content.innerHTML = `<img src=${link}>`;
     }
-    else if (extension == "mp4") {
-        content.innerHTML = `<video controls><source src=${link} type="video/mp4"></source></video>`;
+    else if (fileExtension == "mp4") {
+        content.innerHTML = `
+            <video controls>
+                <source src=${link} type="video/mp4">
+            </source></video>
+        `;
     }
+
+    const left = viewer.querySelector(".left");
+    const right = viewer.querySelector(".right");
+    const rightLink = GenerateLink(index + 1, folderName, fileName, fileExtension);
+    left.style.visibility = index == 1 ? "hidden" : "visible";
+
+    GetRequestStatus(rightLink, exists => {
+        right.style.visibility = exists ? "visible" : "hidden";
+    })
+
+    left.addEventListener("click", () => {
+        ShowContentViewer(index - 1, folderName, fileName, fileExtension);
+    });
+    right.addEventListener("click", () => {
+        ShowContentViewer(index + 1, folderName, fileName, fileExtension);
+    });
 }
 
 // CLOSE CONTENT VIEWER
