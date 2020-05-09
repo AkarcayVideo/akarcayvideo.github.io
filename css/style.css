@@ -222,6 +222,7 @@ body {
   #content-viewer .left, #content-viewer .right {
     position: absolute;
     top: 50%;
+    bottom: 0;
     opacity: 1;
   }
   #content-viewer .left {
@@ -234,6 +235,13 @@ body {
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
   }
+}
+
+iframe {
+  width: 80vw;
+  max-width: 640px;
+  height: 45vw;
+  max-height: 360px;
 }
 
 footer {
