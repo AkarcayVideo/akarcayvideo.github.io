@@ -1,3 +1,5 @@
+let LAST_INDEX = 0;
+
 const GenerateLink = (index, folderName, fileName, fileExtension) => {
     const baseURL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/icerik";
     return `${baseURL}/${folderName}/${fileName}${index}.${fileExtension}`;
@@ -51,7 +53,9 @@ function LoadContent(index, folderName, fileName, fileExtension) {
             }
 
             LoadContent(index + 1, folderName, fileName, fileExtension);
+
         }
+        else { LAST_INDEX = index - 1 }
     })
 }
 
@@ -59,6 +63,7 @@ function ShowContentViewer(index, folderName, fileName, fileExtension) {
     const viewer = document.getElementById("content-viewer");
     const link = GenerateLink(index, folderName, fileName, fileExtension);
     viewer.style.display = "flex";
+    ScrollLock(true);
 
     const content = viewer.querySelector(".content");
 
@@ -75,19 +80,11 @@ function ShowContentViewer(index, folderName, fileName, fileExtension) {
 
     const left = viewer.querySelector(".left");
     const right = viewer.querySelector(".right");
-    const rightLink = GenerateLink(index + 1, folderName, fileName, fileExtension);
     left.style.visibility = index == 1 ? "hidden" : "visible";
+    right.style.visibility = index == LAST_INDEX ? "hidden" : "visible";
 
-    GetRequestStatus(rightLink, exists => {
-        right.style.visibility = exists ? "visible" : "hidden";
-    })
-
-    left.addEventListener("click", () => {
-        ShowContentViewer(index - 1, folderName, fileName, fileExtension);
-    });
-    right.addEventListener("click", () => {
-        ShowContentViewer(index + 1, folderName, fileName, fileExtension);
-    });
+    left.onclick = () => ShowContentViewer(index - 1, folderName, fileName, fileExtension);
+    right.onclick = () => ShowContentViewer(index + 1, folderName, fileName, fileExtension);
 }
 
 // CLOSE CONTENT VIEWER
@@ -101,8 +98,28 @@ function ShowContentViewer(index, folderName, fileName, fileExtension) {
 
         if (y <= .25 || y >= .75) {
             viewer.style.display = "none";
+            ScrollLock(false);
         }
 
     });
 
 })()
+
+function ScrollLock(lock) {
+
+    const body = document.querySelector("body");
+
+    if (lock) {
+
+        window.scrollTo(0, 0);
+        body.style.height = "100vh";
+        body.style.overflowY = "hidden";
+
+    } else {
+
+        body.style.height = "unset";
+        body.style.overflowY = "visible";
+
+    }
+
+}
