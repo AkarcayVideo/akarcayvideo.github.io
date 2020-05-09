@@ -42,9 +42,10 @@ function LoadVideos(page) {
         const iframe = document.createElement("iframe");
         iframe.src = videos[i];
         iframe.frameBorder = 0;
+        iframe.allowFullscreen = true;
         parent.appendChild(iframe);
 
-        iframe.addEventListener("click", () => ShowVideoViewer(i, videos[i]));
+        // iframe.onclick = () => ShowVideoViewer(i, videos);
 
     }
 
