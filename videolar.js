@@ -12,14 +12,10 @@ const VIDEOS = {
         "9ZfLUpsqra8",
         "gTjzUujMni4",
         "e6k7-uhkQ5o",
-        
     ],
     "dugun": [
         "gHaIwJd6rAE",
         "OakHCFmpRa4",
-  
-        
-        
     ],
     "nostalji": [
         "at0Z9oZo1Qo",
@@ -41,10 +37,8 @@ const VIDEOS = {
         "ihR8_unPjBE",
         "M0xxa-46MTY",
         "KhsUjig3WKk",
-        
     ],
     "videolar": [
         "OqdmgxSATQ0",
-        "
     ]
 }
