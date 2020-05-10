@@ -40,12 +40,10 @@ function LoadVideos(page) {
     for (let i = 0; i < videos.length; i++) {
 
         const iframe = document.createElement("iframe");
-        iframe.src = videos[i];
+        iframe.src = "https://www.youtube.com/embed/" + videos[i];
         iframe.frameBorder = 0;
         iframe.allowFullscreen = true;
         parent.appendChild(iframe);
-
-        // iframe.onclick = () => ShowVideoViewer(i, videos);
 
     }
 
