@@ -1,12 +1,12 @@
 let LAST_INDEX = 0;
 
-function GenerateImageLink(index, extension) {
+function GenerateImageLink(index) {
     const baseURL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/";
-    return `${baseURL}/fotograflar/${index}.${extension}`;
+    return `${baseURL}/fotograflar/${index}.jpg`;
 }
 
-function LoadPhotos(index, extension) {
-    const link = GenerateImageLink(index, extension);
+function LoadPhotos(index) {
+    const link = GenerateImageLink(index);
     const parent = document.getElementById("content-holder");
 
     const GetRequestStatus = (url, callback) => {
@@ -26,7 +26,7 @@ function LoadPhotos(index, extension) {
             image.src = link;
             parent.appendChild(image);
             image.addEventListener("click", () => ShowImageViewer(index));
-            LoadPhotos(index + 1, extension);
+            LoadPhotos(index + 1);
 
         }
         else { LAST_INDEX = index - 1 }
