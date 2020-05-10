@@ -116,12 +116,15 @@ body{
 .content-header { margin-bottom: 20px }
 
 #content-holder {
-    width: 80vw;
-    max-width: 1000px;
+    width: 85vw;
+    max-width: 1500px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 10px;
+
+    @media(max-width: 700px)
+    { grid-template-columns: 1fr }
 
     img, video, iframe {
         width: 100%;
@@ -138,7 +141,7 @@ body{
         }
     }
 
-    iframe { max-height: 200px }
+    iframe { max-height: 400px }
 }
 
 #content-viewer {
@@ -165,7 +168,7 @@ body{
     }
 
     .content img, .content video{
-        height: 75vh;
+        height: 70vh;
         object-fit: contain;
         box-shadow: 0 0 10px black;
     }
