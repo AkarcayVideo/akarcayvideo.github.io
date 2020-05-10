@@ -165,8 +165,8 @@ body{
     }
 
     .content img, .content video{
-        width: 75vw;
-        max-height: 75vh;
+        height: 75vh;
+        object-fit: contain;
         box-shadow: 0 0 10px black;
     }
 
