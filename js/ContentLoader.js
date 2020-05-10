@@ -22,6 +22,7 @@ function LoadPhotos(index) {
     GetRequestStatus(link, exists => {
         if (exists) {
 
+            console.log(link);
             const image = document.createElement("img");
             image.src = link;
             parent.appendChild(image);

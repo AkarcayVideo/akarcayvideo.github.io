@@ -169,15 +169,18 @@ body {
 
 #content-holder img, #content-holder video, #content-holder iframe {
   width: 100%;
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   cursor: pointer;
   border-radius: 5px;
 }
 
-#content-holder img:hover, #content-holder video:hover, #content-holder iframe:hover {
+#content-holder img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#content-holder img:hover {
   -webkit-filter: brightness(1);
           filter: brightness(1);
   border-radius: 0;

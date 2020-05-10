@@ -128,10 +128,13 @@ body{
 
     img, video, iframe {
         width: 100%;
-        filter: brightness(.5);
-        transition: all .3s ease-in-out;
         cursor: pointer;
         border-radius: 5px;
+    }
+
+    img{
+        filter: brightness(.5);
+        transition: all .3s ease-in-out;
 
         &:hover{
             filter: brightness(1);
