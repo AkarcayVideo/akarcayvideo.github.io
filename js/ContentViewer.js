@@ -1,8 +1,11 @@
+let LAST_SCROLL_POSITION = 0;
+
 function ShowImageViewer(index) {
     const viewer = document.getElementById("content-viewer");
     const link = GenerateImageLink(index);
     viewer.style.display = "flex";
     ScrollLock(true);
+    LAST_SCROLL_POSITION = window.scrollY;
 
     const content = viewer.querySelector(".content");
     content.innerHTML = `<img src=${link}>`;
@@ -48,6 +51,7 @@ function ScrollLock(lock) {
 
         body.style.height = "unset";
         body.style.overflowY = "visible";
+        window.scrollTo(0, LAST_SCROLL_POSITION);
 
     }
 
