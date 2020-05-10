@@ -1,0 +1,1 @@
+resim1.txt,resim3.txt,resim2.txt,resim4.txt,resim5.txt,
