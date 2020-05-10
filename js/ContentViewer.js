@@ -53,6 +53,8 @@ function ScrollLock(lock) {
         body.style.overflowY = "visible";
         window.scrollTo(0, LAST_SCROLL_POSITION);
 
+        console.log(LAST_SCROLL_POSITION)
+
     }
 
 }
