@@ -27,7 +27,12 @@ function LoadPhotos(index) {
             image.src = link;
             parent.appendChild(image);
             image.addEventListener("click", () => ShowImageViewer(index));
-            LoadPhotos(index + 1);
+
+            if (index <= 10) {
+                LoadPhotos(index + 1);
+            } else {
+                setTimeout(() => LoadPhotos(index + 1), 300);
+            }
 
         }
         else { LAST_INDEX = index - 1 }
@@ -55,11 +60,11 @@ function ShowImageViewer(index) {
     const viewer = document.getElementById("content-viewer");
     const link = GenerateImageLink(index);
     viewer.style.display = "flex";
+
     LAST_SCROLL_POSITION = window.scrollY;
     ScrollLock(true);
 
-    const content = viewer.querySelector(".content");
-    content.innerHTML = `<img src=${link}>`;
+    viewer.querySelector(".content").innerHTML = `<img src=${link}>`;
 
     const left = viewer.querySelector(".left");
     const right = viewer.querySelector(".right");
