@@ -2,7 +2,7 @@ let LAST_INDEX = 0;
 
 function GenerateImageLink(index) {
     const baseURL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/";
-    return `${baseURL}/fotograflar/fotograf${index}.jpeg`;
+    return `${baseURL}/fotograflar/${index}.jpeg`;
 }
 
 function LoadPhotos(index) {
