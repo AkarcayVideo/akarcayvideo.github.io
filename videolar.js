@@ -40,5 +40,8 @@ const VIDEOS = {
     ],
     "videolar": [
         "OqdmgxSATQ0",
+    ],
+    "klipler": [
+
     ]
 }
