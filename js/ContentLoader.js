@@ -100,15 +100,24 @@ function ScrollLock(lock) {
 
     const viewer = document.getElementById("content-viewer");
 
+    const Close = () => {
+        viewer.style.display = "none";
+        ScrollLock(false);
+    }
+
     viewer.addEventListener("click", (e) => {
 
         const y = (e.clientY / window.innerHeight);
         const w = window.innerWidth;
 
-        if (y <= .3 || (y >= .5 && w >= 500)) {
-            viewer.style.display = "none";
-            ScrollLock(false);
+        // DESKTOP
+        if (w >= 500) {
+            if (y <= .3 || y >= .7) {
+                Close();
+            }
         }
+        // MOBILE
+        else if (y <= .5) { Close(); }
 
     });
 
