@@ -228,7 +228,8 @@ body {
 }
 
 #content-viewer .content img, #content-viewer .content video {
-  height: 70vh;
+  max-width: 90vw;
+  max-height: 70vh;
   -o-object-fit: contain;
      object-fit: contain;
   -webkit-box-shadow: 0 0 10px black;
@@ -236,21 +237,20 @@ body {
 }
 
 @media (max-width: 500px) {
+  #content-viewer .content img, #content-viewer .content video {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   #content-viewer .left, #content-viewer .right {
     position: absolute;
-    top: 50%;
-    bottom: 0;
-    opacity: 1;
+    bottom: 30px;
+    font-size: 5em;
   }
   #content-viewer .left {
-    left: 15%;
-    -webkit-transform: translateX(50%) translateY(-50%);
-            transform: translateX(50%) translateY(-50%);
+    left: 50px;
   }
   #content-viewer .right {
-    right: 15%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    right: 50px;
   }
 }
 

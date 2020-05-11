@@ -103,8 +103,9 @@ function ScrollLock(lock) {
     viewer.addEventListener("click", (e) => {
 
         const y = (e.clientY / window.innerHeight);
+        const w = window.innerWidth;
 
-        if (y <= .3 || y >= .7) {
+        if (y <= .3 || (y >= .5 && w >= 500)) {
             viewer.style.display = "none";
             ScrollLock(false);
         }

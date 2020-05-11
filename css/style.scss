@@ -178,22 +178,25 @@ body{
     }
 
     .content img, .content video{
-        height: 70vh;
+        max-width: 90vw;
+        max-height: 70vh;
         object-fit: contain;
         box-shadow: 0 0 10px black;
     }
 
     @media (max-width: 500px)
     {
+        .content img, .content video
+        { box-shadow: none }
+
         .left, .right {
             position: absolute;
-            top: 50%;
-            bottom: 0;
-            opacity: 1;
+            bottom: 30px;
+            font-size: 5em;
         }
 
-        .left { left: 15%;   transform: translateX(50%)  translateY(-50%); }
-        .right { right: 15%; transform: translateX(-50%) translateY(-50%); }
+        .left { left: 50px }
+        .right { right: 50px }
     }
 }
 
