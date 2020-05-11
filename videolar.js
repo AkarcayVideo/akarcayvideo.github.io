@@ -34,8 +34,8 @@ const VIDEOS = {
         "OqdmgxSATQ0",
     ],
     "klipler": [
-        "Ve_JzcqtWqU",
         "j20fHNQiFEk",
+        "Ve_JzcqtWqU",
         "AmeNBneGibQ",
         "RfgQW32WDlg",
         "QFSNf68eNjs",
