@@ -124,7 +124,7 @@ body {
   opacity: .5;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   #nav-container nav {
     display: -webkit-box;
     display: -ms-flexbox;
