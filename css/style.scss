@@ -32,7 +32,7 @@ body{
 }
 
 #nav-container{
-    width: 80vw;
+    width: 90vw;
     max-width: 1000px;
 
     nav{
@@ -44,7 +44,7 @@ body{
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
-    
+
         a {
             transition: color .2s;
             color: var(--theme-color);
@@ -101,8 +101,8 @@ body{
             display: inline;
             opacity: .5;
         }
-    
-        @media (max-width: 750px) {
+
+        @media (max-width: 700px) {
             display: flex;
             flex-direction: column;
             padding: 35px 0;

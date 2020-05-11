@@ -42,7 +42,7 @@ body {
 }
 
 #nav-container {
-  width: 80vw;
+  width: 90vw;
   max-width: 1000px;
 }
 
@@ -124,7 +124,7 @@ body {
   opacity: .5;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   #nav-container nav {
     display: -webkit-box;
     display: -ms-flexbox;
