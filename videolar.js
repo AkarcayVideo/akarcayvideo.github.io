@@ -1,7 +1,8 @@
 const VIDEOS = {
     "anasayfa": [
+        "e6k7-uhkQ5o",
+        "wvO1Hra6Ba0",
         "Dvxts3Bd91E",
-        "Ve_JzcqtWqU",
     ],
     "dugun": [
         "gHaIwJd6rAE",
@@ -33,15 +34,14 @@ const VIDEOS = {
         "OqdmgxSATQ0",
     ],
     "klipler": [
+        "Ve_JzcqtWqU",
         "j20fHNQiFEk",
         "AmeNBneGibQ",
         "RfgQW32WDlg",
         "QFSNf68eNjs",
-        "wvO1Hra6Ba0",
         "NSjU-0gDRUc",
         "xXC9LLIonow",
         "9ZfLUpsqra8",
         "gTjzUujMni4",
-        "e6k7-uhkQ5o",
     ]
 }
