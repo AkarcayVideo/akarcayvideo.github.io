@@ -1,9 +1,11 @@
 const VIDEOS = {
     "anasayfa": [
         "e6k7-uhkQ5o",
+        "vJvXmfyiW6c",
         "wvO1Hra6Ba0",
         "Dvxts3Bd91E",
-    ],
+        "roY3-hYz7hM",   
+     ],
     "dugun": [
         "gHaIwJd6rAE",
         "OakHCFmpRa4",
@@ -29,6 +31,7 @@ const VIDEOS = {
         "M0xxa-46MTY",
         "KhsUjig3WKk",
         "HIkG-aHwfi4",
+        "_tBEgjdOGns",
     ],
     "videolar": [
         "OqdmgxSATQ0",
