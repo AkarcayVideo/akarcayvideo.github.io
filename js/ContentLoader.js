@@ -27,12 +27,7 @@ function LoadPhotos(index) {
             image.src = link;
             parent.appendChild(image);
             image.addEventListener("click", () => ShowImageViewer(index));
-
-            if (index <= 10) {
-                LoadPhotos(index + 1);
-            } else {
-                setTimeout(() => LoadPhotos(index + 1), 300);
-            }
+            LoadPhotos(index + 1);
 
         }
         else { LAST_INDEX = index - 1 }
