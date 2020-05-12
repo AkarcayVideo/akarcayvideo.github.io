@@ -5,7 +5,6 @@ const VIDEOS = {
         "wvO1Hra6Ba0",
         "Dvxts3Bd91E",
         "roY3-hYz7hM",
-        "lE11MbFwwK4",
      ],
     "dugun": [
         "gHaIwJd6rAE",
