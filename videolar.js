@@ -1,7 +1,7 @@
 const VIDEOS = {
     "anasayfa": [
         "e6k7-uhkQ5o",
-        "Uw76je1TGt4,
+        "Uw76je1TGt4",
         "vJvXmfyiW6c",
         "wvO1Hra6Ba0",
         "Dvxts3Bd91E",
