@@ -35,6 +35,7 @@ const VIDEOS = {
         "_tBEgjdOGns",
         "L5pK38Iv66g",
         "Y5NVdlFq370",
+        "x2GPfLQ9RzI",
     ],
     "videolar": [
         "OqdmgxSATQ0",
