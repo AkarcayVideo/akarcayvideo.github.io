@@ -177,6 +177,15 @@ body{
         &:hover { opacity: 1 }
     }
 
+    .left{
+        position: absolute;
+        left: 50px;
+    }
+    .right{
+        position: absolute;
+        right: 50px;
+    }
+
     .content img, .content video{
         max-width: 90vw;
         max-height: 70vh;

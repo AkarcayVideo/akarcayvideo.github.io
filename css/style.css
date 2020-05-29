@@ -227,6 +227,16 @@ body {
   opacity: 1;
 }
 
+#content-viewer .left {
+  position: absolute;
+  left: 50px;
+}
+
+#content-viewer .right {
+  position: absolute;
+  right: 50px;
+}
+
 #content-viewer .content img, #content-viewer .content video {
   max-width: 90vw;
   max-height: 70vh;
