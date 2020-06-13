@@ -66,6 +66,7 @@ const VIDEOS = {
         "0wFItegK87Y",
         "obUzAlQg5-g",
         "OaGuwdazVqk",
+        "54rjKUGNbv4",
     ],
     "klipler": [
         "j20fHNQiFEk",
