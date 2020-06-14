@@ -15,6 +15,10 @@ self.addEventListener('install', e => {
 			`/img/facebook.png`,
 			`/img/youtube.png`,
 			`/img/favicon.png`,
+			`/fotograflar/1.jpg`,
+			`/fotograflar/2.jpg`,
+			`/fotograflar/3.jpg`,
+			`/fotograflar/4.jpg`
 		]).then(() => self.skipWaiting());
 	  })
 	);
