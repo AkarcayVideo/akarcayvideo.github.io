@@ -1,0 +1,17 @@
+{
+    "name": "Akarcay Video",
+    "short_name": "AkarcayVideo",
+    "description": "Akarçay Video'nun web sitesi",
+    "icons": [
+        {
+          "src": "/img/favicon.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff"
+  }

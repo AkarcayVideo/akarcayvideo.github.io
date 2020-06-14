@@ -7,13 +7,16 @@
     <title>Akarçay Video</title>
     <link rel="stylesheet" href="./css/style.css">
 
+    <link rel="icon" 
+    type="image/png" 
+    href="./img/favicon.png">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166252421-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-166252421-1');
     </script>
 </head>
@@ -61,6 +64,15 @@
 <script src="./js/ContentLoader.js"></script>
 <script>
     LoadVideos("anasayfa");
+</script>
+
+<script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(
+            '/service-worker.js',
+            { scope: '/' }
+        ).then(() => { console.log('Service Worker Registered'); });
+      }
 </script>
 
 </html>
