@@ -18,9 +18,9 @@ function LoadImage(index) {
     fetch(url).then(response => {
 
         if (response.ok) {
-            // CreateImage(url, index);
-            // LAST_INDEX = index;
+            CreateImage(url, index);
             LoadImage(index+1);
+            // LAST_INDEX = index;
         }
 
     })
