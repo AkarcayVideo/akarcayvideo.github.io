@@ -18,17 +18,18 @@ function LoadImage(index) {
     fetch(url).then(response => {
 
         if (response.ok) {
-            CreateImage(url, index);
-            LAST_INDEX = index;
+            // CreateImage(url, index);
+            // LAST_INDEX = index;
+            LoadImage(index+1);
         }
 
     })
 }
 
-window.addEventListener('scroll', function() {
-    const progress = window.scrollY / (document.body.scrollHeight-window.innerHeight);
+// window.addEventListener('scroll', function() {
+//     const progress = window.scrollY / (document.body.scrollHeight-window.innerHeight);
 
-    if (progress > .9) {
-        LoadImage(LAST_INDEX + 1);
-    }
-});
+//     if (progress > .9) {
+//         LoadImage(LAST_INDEX + 1);
+//     }
+// });
