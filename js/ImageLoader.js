@@ -7,8 +7,8 @@ const parent = document.getElementById("content-holder");
 function CreateImage(url, index) {
     const image = document.createElement("img");
     image.src = url;
-    parent.appendChild(image);
     image.addEventListener("click", () => ShowImageViewer(index));
+    parent.appendChild(image);
     return image;
 }
 
@@ -20,16 +20,10 @@ function LoadImage(index) {
         if (response.ok) {
             CreateImage(url, index);
             LoadImage(index+1);
-            // LAST_INDEX = index;
+            
+            if (index > LAST_INDEX)
+                LAST_INDEX = index;
         }
 
     })
 }
-
-// window.addEventListener('scroll', function() {
-//     const progress = window.scrollY / (document.body.scrollHeight-window.innerHeight);
-
-//     if (progress > .9) {
-//         LoadImage(LAST_INDEX + 1);
-//     }
-// });
