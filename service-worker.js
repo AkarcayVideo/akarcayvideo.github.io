@@ -4,21 +4,8 @@ self.addEventListener('install', e => {
 		return cache.addAll([
 			`/`,
 			`/index.html`,
-			`/dugun.html`,
-			`/klipler.html`,
-			`/nostalji.html`,
-			`/fotograflar.html`,
-			`/canli-yayin.html`,
-			`/css/style.css`,
-			`/js/ContentLoader.js`,
-			`/img/banner.jpg`,
-			`/img/facebook.png`,
-			`/img/youtube.png`,
-			`/img/favicon.png`,
-			`/fotograflar/1.jpg`,
-			`/fotograflar/2.jpg`,
-			`/fotograflar/3.jpg`,
-			`/fotograflar/4.jpg`
+			`/bundle.css`,
+			`/bundle.js`
 		]).then(() => self.skipWaiting());
 	  })
 	);
