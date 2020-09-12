@@ -14,7 +14,7 @@
     let scrollY;
     let lastLoaded = 0;
 
-    $: columnCount = clientWidth > 1200 ? 3 : clientWidth > 600 ? 2 : 1;
+    $: columnCount = clientWidth > 600 ? 2 : 1;
     $: columnCount && Draw();
     
     $: {
