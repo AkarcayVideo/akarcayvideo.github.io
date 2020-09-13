@@ -1,9 +1,9 @@
 <script>
     import { onMount } from "svelte";
 
-    const IMAGE_BASE_URL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/fotograflar";
-
     export let active;
+
+    const IMAGE_BASE_URL = "https://raw.githubusercontent.com/AkarcayVideo/akarcayvideo.github.io/master/fotograflar";
 
     let columns = [];
     let photos = [];
@@ -16,6 +16,8 @@
 
     $: columnCount = clientWidth > 600 ? 2 : 1;
     $: columnCount && Draw();
+    $: finished = lastLoaded >= photoPaths.length;
+    $: style = `grid-template-columns: repeat(${columnCount}, 1fr)`
     
     $: {
         if (active) {
@@ -23,8 +25,6 @@
             document.ontouchmove = ScrollEvent;
         }
     }
-
-    $: finished = lastLoaded >= photoPaths.length;
 
     onMount(async () => {
         const focusedImage = document.querySelector("#focused-image");
@@ -51,7 +51,6 @@
     }
 
     async function LoadMore() {
-        // Load 2 more columns
         LoadImages(lastLoaded, lastLoaded + columnCount * 2);
     }
 
@@ -75,29 +74,12 @@
         percent >= 0.75 && LoadMore();
     }
 
-    $: style = `grid-template-columns: repeat(${columnCount}, 1fr)`
-
     /* FOCUS SYSTEM */
     function Focus(photo) {
         if (clientWidth <= 600) { return }
 
-        focusedIndex = parseInt(photo.split("/").pop().replace(".jpg", ""));
         focusedImage = photo;
         ScrollEnabled(false);
-    }
-    
-    function FocusPrev() {
-        const photo = `${IMAGE_BASE_URL}/${focusedIndex - 1}.jpg`;
-        Focus(photo);
-    }
-
-    function FocusNext() {
-        const photo = `${IMAGE_BASE_URL}/${focusedIndex + 1}.jpg`;
-        Focus(photo);
-
-        if (focusedIndex >= photos.length - 2 && !finished) {
-            LoadMore();
-        }
     }
 
     function LoseFocus(e) {
@@ -139,15 +121,7 @@
 <svelte:window bind:scrollY></svelte:window>
 
 <div id="focused-image" style="display: {!!focusedImage ? "block" : "none"}; top: {scrollY}px" on:click={LoseFocus}>
-    {#if focusedIndex > 1}
-    <img id="arrow" class="prev" src="img/arrow.svg" alt="Previous" on:click={FocusPrev} />
-    {/if}
-
     <img id="image" src={focusedImage} alt="Resim" />
-
-    {#if focusedIndex < photos.length}
-    <img id="arrow" class="next" src="img/arrow.svg" alt="Next" on:click={FocusNext} />
-    {/if}
 </div>
 
 <style>
@@ -225,7 +199,7 @@
     }
 
     @keyframes show {
-        from { opacity: 0 }
-        to { opacity: 1 }
+        from { opacity: 0; transform: scale(0) }
+        to { opacity: 1; transform: scale(1) }
     }
 </style>

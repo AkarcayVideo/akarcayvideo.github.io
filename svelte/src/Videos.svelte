@@ -64,7 +64,12 @@
         gap: 10px;
     }
 
-    iframe { width: 100%; height: 28vw; background-color: black; }
+    iframe {
+        width: 100%;
+        height: 28vw;
+        background-color: black;
+        animation: show 2s;
+    }
 
     @media (min-width: 800px) {
         iframe { max-height: 350px }
@@ -73,5 +78,10 @@
     @media (max-width: 800px) {
         main { grid-template-columns: 1fr }
         iframe { height: 56vw }
+    }
+
+    @keyframes show {
+        from { opacity: 0; transform: scale(0) }
+        to { opacity: 1; transform: scale(1) }
     }
 </style>

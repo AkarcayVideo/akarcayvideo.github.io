@@ -13,8 +13,8 @@
 
 <style>
     nav {
-        width: 600px;
-        max-width: 75vw;
+        width: 700px;
+        max-width: 85vw;
         margin-top: 40px;
         display: flex;
         justify-content: space-between;

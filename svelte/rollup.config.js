@@ -31,7 +31,7 @@ export default {
 		sourcemap: false,
 		format: 'iife',
 		name: 'app',
-		file: 'docs/bundle.js'
+		file: '../bundle.js'
 	},
 	plugins: [
 		svelte({ dev: !production, css: css => css.write('bundle.css', false) }),
@@ -39,7 +39,7 @@ export default {
 		commonjs(),
 
 		!production && serve(),
-		!production && livereload('docs'),
+		!production && livereload('..'),
 		production && terser()
 	],
 	watch: { clearScreen: false }
