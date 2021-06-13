@@ -3,6 +3,7 @@
 	import Videos from './Videos.svelte';
 	import Photos from './Photos.svelte';
 	import Live from './Live.svelte';
+	import Radio from './Radio.svelte';
 
 	let page = 0;
 </script>
@@ -17,6 +18,7 @@
 	<div class="page" class:active={ page === 3 }><Videos active={ page === 3 } pageName={"dugun"} /></div>
 	<div class="page" class:active={ page === 4 }><Videos active={ page === 4 } pageName={"klipler"} /></div>
 	<div class="page" class:active={ page === 5 }><Live /></div>
+	<div class="page" class:active={ page === 6 }><Radio /></div>
 </div>
 
 <style>
