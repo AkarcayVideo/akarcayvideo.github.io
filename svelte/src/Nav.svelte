@@ -9,11 +9,12 @@
     <span on:click={() => { page = 3 }} class:active={ page == 3 }>Düğün      </span>
     <span on:click={() => { page = 4 }} class:active={ page == 4 }>Klipler    </span>
     <span on:click={() => { page = 5 }} class:active={ page == 5 }>Canlı Yayın</span>
+    <span on:click={() => { page = 6 }} class:active={ page == 6 }>Akarçay Radyosu</span>
 </nav>
 
 <style>
     nav {
-        width: 700px;
+        width: 800px;
         max-width: 85vw;
         margin-top: 40px;
         display: flex;

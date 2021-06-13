@@ -1,13 +1,3 @@
-// const firebaseConfig = {
-//     apiKey: "AIzaSyDwM5uu0fgmWME0VpV4wlyMDkxsjVtVgLs",
-//     authDomain: "akarcayvideo.firebaseapp.com",
-//     databaseURL: "https://akarcayvideo.firebaseio.com",
-//     projectId: "akarcayvideo",
-//     storageBucket: "akarcayvideo.appspot.com",
-//     messagingSenderId: "636518871206",
-//     appId: "1:636518871206:web:42e5578769c1aad105c467",
-//     measurementId: "G-T54SWL4EBS"
-// };
 const firebaseConfig = {
     apiKey: "AIzaSyBG2iPaAP6I-ZmYbI419bd0SIbLW5k9oqw",
     authDomain: "akarcayvideo-backup.firebaseapp.com",
